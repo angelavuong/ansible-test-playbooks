@@ -1,0 +1,14 @@
+- name: Testing the copy module against a targeted host
+  hosts: web
+  gather_facts: false
+  become: true
+
+  tasks:
+    - name: Copy files to dest directory
+      copy:
+        remote_src: true
+        src: /home/ec2-user
+        dest: /usr/bin
+        mode: '0755'
+        owner: root
+        group: system
