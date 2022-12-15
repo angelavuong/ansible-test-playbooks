@@ -1,5 +1,5 @@
 - name: Testing the copy module against a targeted host
-  hosts: node3
+  hosts: {{ hosts }}
   gather_facts: false
   become: true
 
