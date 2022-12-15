@@ -7,8 +7,8 @@
     - name: Copy files to dest directory
       copy:
         remote_src: true
-        src: /home/ec2-user
-        dest: /usr/bin/
+        src: /home/ec2-user/hello.txt
+        dest: /tmp
         directory_mode: '0777'
         owner: root
         group: root
