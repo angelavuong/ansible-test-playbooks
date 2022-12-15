@@ -7,7 +7,7 @@
     - name: Copy files to dest directory
       copy:
         remote_src: true
-        src: /home/ec2-user
+        src: /home/ec2-user/*
         dest: /tmp/
         mode: '0777'
         owner: root
