@@ -12,3 +12,8 @@
         mode: 0777
         owner: root
         group: root
+
+    - name: Update file permissions
+      file:
+        path: /tmp/hello.txt
+        mode: 0777
