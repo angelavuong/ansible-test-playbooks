@@ -9,11 +9,11 @@
         remote_src: true
         src: /home/ec2-user/
         dest: /tmp/
-        mode: "0777"
+        mode: '0777'
         owner: root
         group: root
 
-    - name: Update file permissions
-      file:
-        path: /tmp/hello.txt
-        mode: 0777
+#     - name: Update file permissions
+#       file:
+#         path: /tmp/hello.txt
+#         mode: 0777
