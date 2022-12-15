@@ -11,4 +11,4 @@
         dest: /usr/bin
         mode: '0755'
         owner: root
-        group: system
+        group: root
