@@ -1,5 +1,5 @@
 - name: Testing the copy module against a targeted host
-  hosts: web
+  hosts: node3
   gather_facts: false
   become: true
 
