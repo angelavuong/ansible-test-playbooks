@@ -8,10 +8,10 @@
       copy:
         remote_src: true
         src: /home/ec2-user/hello.txt
-        dest: /tmp
+        dest: /usr/bin/
         mode: '0777'
         owner: root
-        group: root
+        group: system
 
 #     - name: Update file permissions
 #       file:
