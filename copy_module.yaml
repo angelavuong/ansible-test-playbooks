@@ -12,7 +12,7 @@
         mode: 0777
         owner: root
         group: root
-   - name: Change permissions of file
-     file:
-       path: /tmp/hello.txt
-       mode: 0777
+    - name: Change permissions of file
+      file:
+        path: /tmp/hello.txt
+        mode: 0777
