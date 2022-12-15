@@ -8,7 +8,7 @@
       copy:
         remote_src: true
         src: /home/ec2-user
-        dest: /tmp/
+        dest: /usr/bin/
         directory_mode: '0777'
         owner: root
         group: root
