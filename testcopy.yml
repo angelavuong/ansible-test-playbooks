@@ -6,7 +6,7 @@
 
   tasks:
     - name: do the copy of files
-      ansible.builtin. copy:
+      ansible.builtin.copy:
         remote_src: true
         src: /home/ec2-user/src/
         dest: /home/ec2-user/dest
