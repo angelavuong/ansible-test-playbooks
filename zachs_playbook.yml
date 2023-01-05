@@ -1,7 +1,8 @@
 ---
-- hosts: rhel7
-  connection: local
+- name: test file copy
+  hosts: rhel7
   gather_facts: false
+  become: true
 
   tasks:
     - name: copy file
