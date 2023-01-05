@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: rhel7
   connection: local
   gather_facts: false
 
