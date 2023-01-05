@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: copy file
+      ansible.builtin.copy:
+        src: /tmp/filesrc/
+        dest: /tmp/filedest/
+        owner: root
+        group: root
+      become: true
