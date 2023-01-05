@@ -1,0 +1,15 @@
+---
+- name: test file copy
+  hosts: rhel7
+  gather_facts: false
+  become: true
+
+  tasks:
+    - name: do the copy of files
+      copy:
+        remote_src: true
+        src: /home/ec2-user/src/
+        dest: /home/ec2-user/dest
+        mode: '0777'
+        owner: root
+        group: root
