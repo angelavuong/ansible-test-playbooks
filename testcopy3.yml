@@ -1,0 +1,16 @@
+---
+- name: test file copy
+  hosts: rhel7
+  gather_facts: false
+  become: true
+
+  tasks:
+    - name: do the copy of files
+#     Using the copy module instead of ansible.builtin.copy
+      copy:
+        remote_src: true
+        src: /home/ec2-user/src/test.txt
+        dest: /home/ec2-user/dest
+        mode: '0777'
+        owner: root
+        group: root
