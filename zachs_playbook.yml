@@ -5,9 +5,11 @@
   become: true
 
   tasks:
-    - name: copy file
+    - name: do the copy of files
       ansible.builtin.copy:
+        remote_src: true
         src: /tmp/filesrc/
         dest: /tmp/filedest/
+        mode: '0777'
         owner: root
         group: root
