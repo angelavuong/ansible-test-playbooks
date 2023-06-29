@@ -1,0 +1,5 @@
+---
+- name: testing rhel system roles
+  hosts: all
+  roles:
+  - redhat.rhel_system_roles.logging
