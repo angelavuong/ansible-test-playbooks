@@ -8,7 +8,9 @@
     ansible.builtin.uri:
       url: https://my-automation-controller-aap.apps.ocp4.tigerlab.io/api/v2/tokens/
       method: POST
-      body: '{ "username": "admin", "password": "4lbTJAQJnBzF1rby8TRuzONAgT3n0NnR" }'
+      body:
+        username": "admin"
+        password": "4lbTJAQJnBzF1rby8TRuzONAgT3n0NnR"
       body_format: json
       validate_certs: no
     register: authtoken
