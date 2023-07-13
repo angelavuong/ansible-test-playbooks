@@ -5,7 +5,7 @@
 
 
   tasks:
-  - name: Authenticate to Controller:
+  - name: Authenticate to Controller
     ansible.builtin.uri:
       url: https://my-automation-controller-aap.apps.ocp4.tigerlab.io/api/v2/login
       method: POST
