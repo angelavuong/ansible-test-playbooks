@@ -25,8 +25,7 @@
         Authorization: "Bearer fyAfma8Fcuwhp8mMPaj3AdTipXfWM7"
       validate_certs: no
     register: results
-
-  - name: Return results
+  
+  - name: Print results
     ansible.builtin.debug:
-      vars: results
-      
+      msg: "{{ results }}"
