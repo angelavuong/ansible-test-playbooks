@@ -9,11 +9,10 @@
     ansible.builtin.uri:
       url: https://my-automation-controller-aap.apps.ocp4.tigerlab.io/api/v2/inventories
       method: GET
-      user: "Bearer XYfbOFoLZL4N5FnKfoQuMJiTUjiwG3"
+      user: "XYfbOFoLZL4N5FnKfoQuMJiTUjiwG3"
       password: ""
       headers:
         Content-Type: application/json
-        Authentication: "Bearer XYfbOFoLZL4N5FnKfoQuMJiTUjiwG3"
       validate_certs: no
     register: results
       
