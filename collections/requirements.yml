@@ -1,2 +1,2 @@
 collections:
-- redhat.rhel_system_roles
+# - redhat.rhel_system_roles
