@@ -9,8 +9,8 @@
     ansible.builtin.uri:
       url: https://my-automation-controller-aap.apps.ocp4.tigerlab.io/api/login
       method: POST
-      username: admin
-      password: 4lbTJAQJnBzF1rby8TRuzONAgT3n0NnR
+      url_username: admin
+      url_password: 4lbTJAQJnBzF1rby8TRuzONAgT3n0NnR
       body_format: json
       validate_certs: no
     register: web_auth
