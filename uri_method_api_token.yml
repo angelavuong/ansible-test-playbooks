@@ -1,0 +1,16 @@
+---
+- name: Test URI module
+  hosts: localhost
+  gather_facts: false
+
+
+  tasks:
+  - name: Getting Inventory Data using Controller API with API token
+    ansible.builtin.uri:
+      url: https://my-automation-controller-aap.apps.ocp4.tigerlab.io/api/v2/inventories
+      method: GET
+      headers:
+        Content-Type: application/json
+        Authentication: "Bearer XYfbOFoLZL4N5FnKfoQuMJiTUjiwG3"
+    register: results
+      
