@@ -28,4 +28,4 @@
   
   - name: Print results
     ansible.builtin.debug:
-      msg: "{{ results }}"
+      var: results
