@@ -3,26 +3,30 @@
   hosts: localhost
   gather_facts: false
 
-
   tasks:
-  - name: Authenticate to Controller
+  - name: Obtain auth token
     ansible.builtin.uri:
-      url: https://my-automation-controller-aap.apps.ocp4.tigerlab.io/api/login
+      url: https://my-automation-controller-aap.apps.ocp4.tigerlab.io/api/v2/tokens/
       method: POST
       body:
-        username: "admin"
-        password: "4lbTJAQJnBzF1rby8TRuzONAgT3n0NnR"
+        username: " {{ controller_username }}"
+        password: " {{ controller_password }}"
       body_format: json
       validate_certs: no
-    register: web_auth
+    register: authtoken
     
   - name: Getting Inventory Data using Controller API with API token
     ansible.builtin.uri:
       url: https://my-automation-controller-aap.apps.ocp4.tigerlab.io/api/v2/inventories
       method: GET
       body_format: json
+      return_content: yes
       headers:
-        Authorization: "Bearer {{ web_auth.json.token}}"
+        Authorization: "Bearer {{ authtoken.json.token}}"
       validate_certs: no
     register: results
+
+  - name: Return results
+    ansible.builtin.debug:
+      vars: results
       
