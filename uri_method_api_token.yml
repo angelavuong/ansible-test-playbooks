@@ -14,7 +14,6 @@
       body_format: json
       validate_certs: no
     register: web_auth
-    until: web_auth.status == 200 
     
   - name: Getting Inventory Data using Controller API with API token
     ansible.builtin.uri:
