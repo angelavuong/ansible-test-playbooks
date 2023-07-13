@@ -4,16 +4,16 @@
   gather_facts: false
 
   tasks:
-  - name: Obtain auth token
-    ansible.builtin.uri:
-      url: https://my-automation-controller-aap.apps.ocp4.tigerlab.io/api/v2/tokens/
-      method: POST
-      body:
-        username: "admin"
-        password: "4lbTJAQJnBzF1rby8TRuzONAgT3n0NnR"
-      body_format: json
-      validate_certs: no
-    register: authtoken
+  # - name: Obtain auth token
+  #   ansible.builtin.uri:
+  #     url: https://my-automation-controller-aap.apps.ocp4.tigerlab.io/api/v2/tokens/
+  #     method: POST
+  #     body:
+  #       username: "admin"
+  #       password: "4lbTJAQJnBzF1rby8TRuzONAgT3n0NnR"
+  #     body_format: json
+  #     validate_certs: no
+  #   register: authtoken
     
   - name: Getting Inventory Data using Controller API with API token
     ansible.builtin.uri:
@@ -22,7 +22,7 @@
       body_format: json
       return_content: yes
       headers:
-        Authorization: "Bearer {{ authtoken.json.token}}"
+        Authorization: "Bearer fyAfma8Fcuwhp8mMPaj3AdTipXfWM7"
       validate_certs: no
     register: results
 
