@@ -12,5 +12,6 @@
       headers:
         Content-Type: application/json
         Authentication: "Bearer XYfbOFoLZL4N5FnKfoQuMJiTUjiwG3"
+      validate_certs: no
     register: results
       
