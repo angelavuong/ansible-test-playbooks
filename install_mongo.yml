@@ -1,0 +1,16 @@
+---
+- name: Install MongoDB
+  hosts: all 
+  gather_facts: false 
+  become: true
+
+  tasks: 
+  - name: Install package mongodb-org
+    ansible.builtin.package:
+      name: mongodb-org
+      state: present
+      
+
+
+
+
