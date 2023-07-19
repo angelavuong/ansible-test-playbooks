@@ -1,6 +1,6 @@
 ---
 - name: Install MongoDB
-  hosts: all 
+  hosts: mongodb 
   gather_facts: false 
   become: true
 
