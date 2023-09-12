@@ -6,12 +6,12 @@
   tasks:
   - name: Getting Inventory Data using Controller API with API token
     ansible.builtin.uri:
-      url: https://my-automation-controller-aap.apps.ocp4.tigerlab.io/api/v2/inventories
+      url: https:/
       method: GET
       body_format: json
       return_content: yes
       headers:
-        Authorization: "Bearer GjDkeGezGuIzeOjr9vj1pkAA24Bkn5"
+        Authorization: "Bearer """
       validate_certs: no
     register: results
   
